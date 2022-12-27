@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Overpass&family=Poppins:wght@300;400;600&family=Roboto&family=Roboto+Serif:ital,opsz,wght@1,8..144,100;1,8..144,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.screen {
+    height: 100vh;
+}
+
+header {
+    position: fixed;  /* navbarı şeffaf yaptı ve sabitledi */
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 100px;
+    transition: all ease0.5s;
+    z-index: 99999;
+}
+
+header ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header .menu a {
+    color: #fff;
+    transition: all ease 0.5s;
+    font-weight: 500;
+}
+
+header .icons a {
+    color: white;
+    transition: all ease 0.5s;
+    font-weight: 500;
+}
+
+header:hover {
+    background-color: #fff;
+    transition: all ease 0.5s;
+}
+
+header:hover a {
+    color: black;
+}
+
+.mega-menu {
+    position: absolute;
+    left: 20%;
+    top: 80px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px 100px;
+    border-radius: 5px;
+    display: none;
+}
+
+header ul li:hover .mega-menu {
+    display: block;
+    width: 100%;
+}
+
+.mega-menu ul li {
+    width: 100%;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.mega-menu ul li a {
+    color: #000;
+    display: block;
+}
+
+.mega-menu ul li i {
+    font-size: 12px;
+    opacity: 0;
+    transition: all ease 0.5s;
+}
+
+.mega-menu ul li a:hover i {
+    opacity: 1;
+}
+
+.navbar {
+    width: 100%;
+    margin: 15px auto;
+}
+
+.navbar .logo img {
+    width: 100px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container .menu li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+.container .icons .shop {
+    margin-right: 15px;
+}
+
+.grid-container {
+    display: flex;
+    height: 100vh;
+    flex-wrap: nowrap;
+}
+
+.grid-container .column {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: all ease 0.8s;
+}
+
+.grid-container .column img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.grid-container .column:hover {
+    width: 200%;
+}
+
+.grid-container .column .text {
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    height: 100%;
+    padding: 50px 50px 100px;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    transition: all ease 0.5s 0.2s;
+}
+
+.grid-container .column:hover .text {
+    opacity: 1;
+    bottom: 0;
+}
+
+.grid-container .column .text h3{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.grid-container .column .text a {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.grid-container .column .text a span {
+    font-size: 20px;
+    display: inline-block;
+    transition: all ease 2s;
+}
+
+.grid-container .column .text a:hover span {
+    transform: rotate(360deg);
+}
